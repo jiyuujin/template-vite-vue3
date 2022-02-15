@@ -8,17 +8,12 @@
   </p>
 </template>
 
-<script lang="ts">
-export default {
-  props: {
-    msg: {
-      type: String
-    }
-  },
-  data() {
-    return {
-      count: 0 as number
-    }
-  }
-}
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const props = defineProps({
+  msg: String
+})
+
+const count = ref(0)
 </script>
