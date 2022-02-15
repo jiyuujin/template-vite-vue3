@@ -6,7 +6,10 @@
     "strict": true,
     "declaration": true,
     "noUnusedLocals": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": [
+      "vite/client"
+    ]
   },
   "include": [
     "./**/*.vue",
