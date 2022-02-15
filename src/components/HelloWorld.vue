@@ -1,6 +1,6 @@
 <template>
   <h1>{{ msg }}</h1>
-  <button @click="() => count++">
+  <button @click="increment">
     count is: {{ count }}
   </button>
   <p>
@@ -8,17 +8,12 @@
   </p>
 </template>
 
-<script lang="ts">
-export default {
-  props: {
-    msg: {
-      type: String
-    }
-  },
-  data() {
-    return {
-      count: 0 as number
-    }
-  }
-}
+<script setup lang="ts">
+const props = defineProps({
+  msg: String
+})
+
+let count = $ref(0)
+
+const increment = () => count++
 </script>

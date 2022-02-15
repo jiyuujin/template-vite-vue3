@@ -10,7 +10,9 @@ module.exports = defineConfig({
       imports: ['vue'],
       dts: 'src/auto-imports.d.ts',
     }),
-    vue()
+    vue({
+      reactivityTransform: true
+    })
   ],
   server: {
     fs: {
